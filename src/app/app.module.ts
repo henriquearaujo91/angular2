@@ -18,6 +18,7 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { ShoppingCarComponent } from './restaurant-detail/shopping-car/shopping-car.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { FooterComponent } from './footer/footer.component';
+import { ShoppingCarService } from './restaurant-detail/shopping-car/shopping-car.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { FooterComponent } from './footer/footer.component';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [RestaurantsService],
+  providers: [RestaurantsService, ShoppingCarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
