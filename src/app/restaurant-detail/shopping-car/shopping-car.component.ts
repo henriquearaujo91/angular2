@@ -16,6 +16,19 @@ export class ShoppingCarComponent implements OnInit {
     return this.shoppingCarService.itens;
   }
 
+  clear() {
+    this.shoppingCarService.clear();
+  }
+
+  removeItem(item: any) {
+    this.shoppingCarService.removeItem(item);
+
+  }
+
+  addItem(menuItem: any) {
+    this.shoppingCarService.addItem(menuItem);
+  }
+
   total(): number {
     return this.shoppingCarService.total();
   }
