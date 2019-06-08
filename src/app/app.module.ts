@@ -21,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ShoppingCarService } from './restaurant-detail/shopping-car/shopping-car.service';
 import { OrderComponent } from './order/order.component';
 import { FormsModule} from '@angular/forms';
+import { InputComponent } from './shared/input/input.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FormsModule} from '@angular/forms';
     ShoppingCarComponent,
     ReviewsComponent,
     FooterComponent,
-    OrderComponent
+    OrderComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
