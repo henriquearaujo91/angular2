@@ -20,10 +20,11 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { FooterComponent } from './footer/footer.component';
 import { ShoppingCarService } from './restaurant-detail/shopping-car/shopping-car.service';
 import { OrderComponent } from './order/order.component';
-import { FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { InputComponent } from './shared/input/input.component';
 import { RadioComponent } from './shared/radio/radio.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
+import { OrderService } from './order/order.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { OrderItemsComponent } from './order/order-items/order-items.component';
     RouterModule.forRoot(ROUTES),
     FormsModule
   ],
-  providers: [RestaurantsService, ShoppingCarService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
+  providers: [RestaurantsService, ShoppingCarService, OrderService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

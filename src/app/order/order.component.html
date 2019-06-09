@@ -43,8 +43,9 @@
         <div class="col-xs-12">
           <p class="lead">Itens do Pedido:</p>
         </div>
-        
-        <mt-order-items></mt-order-items>
+
+        <mt-order-items [items]="cartItems()" (increseQty)="increseQty($event)" (decreseQty)="decreseQty($event)"
+          (remove)="remove($event)"></mt-order-items>
 
         <!-- /.col -->
       </div>

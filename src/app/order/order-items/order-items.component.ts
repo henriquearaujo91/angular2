@@ -31,4 +31,7 @@ export class OrderItemsComponent implements OnInit {
     this.remove.emit(item);
   }
 
+  showItems(): boolean {
+    return this.items.length > 0;
+  }
 }

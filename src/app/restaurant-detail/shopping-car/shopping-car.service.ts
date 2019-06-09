@@ -11,9 +11,20 @@ export class ShoppingCarService {
     addItem(menuItem: MenuItem) {
         let foundItem = this.itens.find((mItem) => mItem.menuItem.id === menuItem.id);
         if (foundItem) {
-            foundItem.quantity += 1;
+            this.increseQty(foundItem);
         } else {
             this.itens.push(new CartItem(menuItem));
+        }
+    }
+
+    increseQty(item: CartItem) {
+        item.quantity += 1;
+    }
+
+    decreseQty(item: CartItem) {
+        item.quantity -= 1;
+        if (item.quantity === 0) {
+            this.removeItem(item);
         }
     }
 
