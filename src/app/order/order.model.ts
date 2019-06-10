@@ -11,5 +11,3 @@ export class Order {
 export class OrderItem {
     constructor(public quantity: number, public menuId: string) { }
 }
-
-//export { Order, OrderItem }
